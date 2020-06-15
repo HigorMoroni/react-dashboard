@@ -1,0 +1,92 @@
+@import "../../assets/scss/variables.scss";
+
+.content {
+    font-family: $fontePadrao;
+    margin-left: 200px;
+
+    h1, h2, h3 {
+        font-size: 16px;
+    }
+    h1, h2 {
+        font-weight: bold;
+        color: $titulo;
+        border-left: 3px solid $principal;
+        margin: 20px 20px;
+    }
+    h1 { padding: 2px 5px }
+    h2 { padding: 2px 12px }
+    h3 { 
+        color: $subtitulo;
+        padding-bottom: 5px;
+    }
+
+    .geral {
+        margin: 0 20px;
+        .card {
+            background: $branco;
+            border-radius: 6px;
+            box-shadow: 4.915px 3.441px 6px 0px $sombra;
+            padding: 20px 20px;
+            display: inline-block;
+            margin-left: 1%;
+            span {
+                font-weight: bold;
+                font-size: 22px;
+                color: $principal;
+            }
+            @media (min-width: 1066px) {
+                display: inline-block;
+                width: 49%;
+            } 
+            @media (max-width: 1065px) {
+                width: 98%;
+                margin-bottom: 3%;
+            }
+        }
+        .row {
+            width: 50%;
+            display: inline-block;
+        }
+    }
+    .clientes {
+        margin: 0 20px;
+        table {
+            width: 100%;
+            .row {
+                background: $branco;
+                font-size: 14px;
+                color: $texto;
+                border-radius: 5px;
+                margin-bottom: 3px;
+                td {
+                    padding: 7px 20px;
+                    width: 22vw;
+                    .client {
+                        position: relative;
+                        bottom: 7px;
+                    }
+                    &.client-data {
+                        .user-image {
+                            display: inline-block;
+                            vertical-align: sub;
+                            margin-right: 20px;
+                            img {
+                                border-radius: 50%;
+                                height: 34px;
+                                width: 34px;
+                            }
+                        }                      
+                    }
+                    &.client-infos {
+                        .value {
+                            float: right;
+                        }
+                    }
+                    &.client-status {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}

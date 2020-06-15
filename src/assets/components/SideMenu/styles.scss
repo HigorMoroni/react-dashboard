@@ -1,0 +1,63 @@
+@import "../../scss/variables";
+
+#sideMenu {
+    font-family: $fontePadrao;
+    background: $branco;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    div.logo {
+        background: $principal;
+        position: absolute;
+        width: 200px;
+        height: 75px;
+        img {
+            position:absolute;
+            top:50%;
+            right:50%;
+            margin-top:-27.5px;
+            margin-right:-45px;
+        }
+    }
+    nav {
+        margin-top: 75px;
+        padding-top: 20px;
+        a {
+            display: block;
+            font-size: 14px;
+            color: $texto;
+            text-decoration: none;
+            padding: 10px 5px;
+            transition:  all 0.3s ease-in-out;
+            span {
+                position: relative;
+                bottom: 4px;
+            }
+            &:hover, &.active {
+                background: $secundaria;
+            }
+            .icon {
+                color: $principal;
+                font-size: 1.3rem;
+                margin-right: 0.3rem;
+                display: inline-block;
+                width: 30px;
+                position: relative;
+                top: 2px;
+            }
+            &.last {
+                position: absolute;
+                bottom: 0;
+                width: 100%;           
+                background: $principal;
+                font-weight: bold;
+                color: $branco;
+                .icon {
+                    color: $branco;
+                }
+            }
+        }
+    }
+}

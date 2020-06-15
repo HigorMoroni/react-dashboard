@@ -1,0 +1,10 @@
+@import "variables";
+@import "resets";
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: $fontePadrao;
+    background: $fundo;
+}

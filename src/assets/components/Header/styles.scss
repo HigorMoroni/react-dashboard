@@ -1,0 +1,80 @@
+@import "../../scss/variables";
+
+header {
+    font-family: $fontePadrao;
+    background: $branco;
+    margin-left: 200px;
+    height: 75px;
+    padding: 10px 20px;
+    .icon {
+        color: $icone;
+    }
+    .search-area {
+        display: inline-block;
+        width: 50%;
+        border: 1px solid $fundo;
+        border-radius: 19px;
+        margin: 10px 0;
+        transition: all 0.3s ease-in-out;
+        .icon {
+            position: relative;
+            top: 6px;
+            font-size: 1.4rem;
+            margin-left: 10px;
+            color: $subtitulo;
+        }         
+        input#search {
+            background: transparent;
+            color: $titulo;
+            border: none;
+            font-size: 14px;
+            padding: 10px;
+            width: 80%;
+            &:focus {
+                outline: none;
+            }
+        }
+        &:hover {
+            background: $fundo;
+        }
+        ::-webkit-input-placeholder {
+            color: $subtitulo;
+        }
+    }
+    .user-area {
+        float: right;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 30px;
+            &.notification {
+                position: relative;
+                font-size: 2rem;
+                circle {
+                    display: inline-block;
+                    background: $vermelho;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -5px;
+                    left: 22px;
+                }
+            }
+            .user-image {
+                display: inline-block;
+                vertical-align: sub;
+                img {
+                    border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+            .arrow {
+                margin-left: 10px;
+                position: relative;
+                bottom: 10px;
+            }
+        }
+    }
+}
