@@ -37,7 +37,7 @@ const Header = () => {
                 </Link>
                 <Link to="/">
                     <div className="user-image">
-                        <img src={user[0].photo_url} alt={user[0].name}/>
+
                     </div>
                     <Arrow className="icon arrow"/>
                 </Link>
