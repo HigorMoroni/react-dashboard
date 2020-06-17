@@ -2,27 +2,32 @@ import React from "react";
 
 import "./styles.scss";
 
-const Cards = () => {
+
+interface CardsProps {
+    infos: string[];
+}
+
+const Cards: React.FC<CardsProps> = ({infos}) => {
     return (
         <>
             <div className="row">
                 <div className="card">
-                <h3>Total de clientes</h3>
-                <span>15</span>
+                    <h3>{infos[0]}</h3>
+                    <span>{infos[1]}</span>
                 </div>
                 <div className="card">
-                <h3>Clientes inadimplentes</h3>
-                <span>5</span>
+                    <h3>{infos[2]}</h3>
+                    <span>{infos[3]}</span>
                 </div>
             </div>
             <div className="row">
                 <div className="card">
-                <h3>Clientes adimplentes</h3>
-                <span>10</span>
+                    <h3>{infos[4]}</h3>
+                    <span>{infos[5]}</span>
                 </div>
                 <div className="card">
-                <h3>Total arrecadado</h3>
-                <span>R$ 4.162,26</span>
+                    <h3>{infos[6]}</h3>
+                    <span>{infos[7]}</span>
                 </div>
             </div>
         </>

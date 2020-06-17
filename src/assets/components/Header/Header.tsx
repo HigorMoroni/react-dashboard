@@ -1,23 +1,15 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {AiOutlineSearch as Search, AiOutlineBell as Bell, AiOutlineDown as Arrow} from 'react-icons/ai';
 import {Link} from 'react-router-dom';
-import api from '../../../services/api';
 
 import "./styles.scss";
 
-interface User {
-    name: string;
-    photo_url: string;
+
+interface HeaderProps {
+    userImage?: string;
 }
 
-const Header = () => {
-    const [user, setUser] = useState<User[]>([]);
-    useEffect(() => {
-        api.get('profile/1').then(response => {
-            setUser(response.data)
-        })
-    }, []);
-
+const Header: React.FC<HeaderProps> = ({userImage}) => {
     return (
         <header>
             <Link to="/search">
@@ -37,7 +29,7 @@ const Header = () => {
                 </Link>
                 <Link to="/">
                     <div className="user-image">
-
+                        <img src={userImage} alt="User"/>
                     </div>
                     <Arrow className="icon arrow"/>
                 </Link>
