@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 //import {Link} from 'react-router-dom';
 
 import "./styles.scss"
 
+interface PageSelectProps {
+    space?: number;
+}
 
-function PageSelect() {
+const PageSelect: React.FC<PageSelectProps> = ({space}) => {
+    const [totalPaginas, setTotalPaginas] = useState<number>(0);
+    const [paginaAtual, setPaginaAtual] = useState<number>(0);
+    const [proximasPaginas, setProximasPaginas] = useState<number[]>([]);
     return (
         <footer>
             <div className="back btn">

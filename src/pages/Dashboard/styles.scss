@@ -32,7 +32,9 @@
                 margin-bottom: 3px;
                 td {
                     padding: 7px 20px;
-                    width: 22vw;
+                    &.sm { width: 12vw}
+                    &.md { width: 20vw}
+                    &.lg { width: 24vw}
                     .client {
                         position: relative;
                         bottom: 7px;
@@ -49,13 +51,11 @@
                             }
                         }                      
                     }
-                    &.client-infos {
-                        .value {
-                            float: right;
-                        }
-                    }
                     &.client-status {
                         text-align: right;
+                        .inadimplente {
+                            color: $vermelho;
+                        }
                     }
                 }
             }
