@@ -85,24 +85,24 @@ const Dashboard = () => {
                 const status = user.status==="0"?"Adimplente":"Inadimplente";
                 const amount = Number(user.amount).toLocaleString('pt-BR');
                 return (
-                  <tr>
-                  <div className="row">
-                    <td className="client-data lg">
-                      <div className="user-image">
-                        <img src={user.photo_url} alt={user.name}/>
-                      </div>
-                      <span className="client">{user.name}</span>
-                    </td>
-                    <td className="client-email sm"><span className="client">{user.email}</span></td>
-                    <td className="client-phone md"><span className="client">{user.phone}</span></td>
-                    <td className="client-amount sm"><span className="client">{amount}</span></td>
-                    <td className="client-status sm">
-                      <span className={`client ${user.status==="0"?"":"inadimplente"}`}>
-                        {status}
-                      </span>
-                    </td>
-                  </div>
-                </tr>
+                    <div className="row">
+                        <tr>
+                            <td className="client-data lg">
+                                <div className="user-image">
+                                    <img src={user.photo_url} alt={user.name}/>
+                                </div>
+                                <span className="client">{user.name}</span>
+                            </td>
+                            <td className="client-email lg"><span className="client">{user.email}</span></td>
+                            <td className="client-phone md"><span className="client">{user.phone}</span></td>
+                            <td className="client-amount sm"><span className="client">{amount}</span></td>
+                            <td className="client-status lg">
+                                <span className={`client ${user.status==="0"?"":"inadimplente"}`}>
+                                    {status}
+                                </span>
+                            </td>
+                        </tr>
+                    </div>
                 )
               })}
             </tbody>

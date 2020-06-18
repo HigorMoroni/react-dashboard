@@ -16,7 +16,7 @@ const Search = () => {
   return (
     <>
       <SideMenu />
-      <Header autoFocus={true} func={handleInputChange}/>
+      <Header autoFocus={true}/>
       <div className="container">
         
       </div>

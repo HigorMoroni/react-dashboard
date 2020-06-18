@@ -14,11 +14,11 @@
             font-size: 22px;
             color: $principal;
         }
-        @media (min-width: 1066px) {
+        @media (min-width: 1120px) {
             display: inline-block;
             width: 49%;
         } 
-        @media (max-width: 1065px) {
+        @media (max-width: 1121px) {
             width: 98%;
             margin-bottom: 3%;
         }

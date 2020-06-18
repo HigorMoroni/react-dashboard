@@ -32,9 +32,9 @@
                 margin-bottom: 3px;
                 td {
                     padding: 7px 20px;
-                    &.sm { width: 10vw}
-                    &.md { width: 20vw}
-                    &.lg { width: 28vw}
+                    &.sm { width: 5vw }
+                    &.md { width: 15vw }
+                    &.lg { width: 22vw }
                     .client {
                         position: relative;
                         bottom: 7px;
@@ -56,6 +56,9 @@
                         .inadimplente {
                             color: $vermelho;
                         }
+                    }
+                    &.client-amount {
+                        text-align: right;
                     }
                 }
             }

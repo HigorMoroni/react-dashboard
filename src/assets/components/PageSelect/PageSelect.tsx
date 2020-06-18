@@ -35,7 +35,6 @@ const PageSelect: React.FC<PageSelectProps> = (props) => {
                         pagina===paginaAtual+1 ||
                         (paginaAtual===1&&pagina===3)
                     ) return <span className={paginaAtual===pagina?"active":""}>{pagina}</span>
-                    else if (pagina===paginas.length) return <span>...</span>
                     else return ''
                 })}
             </div>
