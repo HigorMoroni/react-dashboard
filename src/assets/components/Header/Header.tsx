@@ -8,15 +8,17 @@ import "./styles.scss";
 interface HeaderProps {
     userImage?: string;
     autoFocus: boolean;
+    func: Function;
 }
 
-const Header: React.FC<HeaderProps> = ({userImage, autoFocus}) => {
+const Header: React.FC<HeaderProps> = ({userImage, autoFocus, func}) => {
     const inputProps = {
         type: "text",
         name: "search",
         id: "search",
         placeholder: "Busque por clientes",
-        autoFocus: false
+        autoFocus: false,
+        onChange: func,
       };
     if (autoFocus) inputProps.autoFocus = true;
     return (
