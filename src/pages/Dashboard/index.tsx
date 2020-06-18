@@ -109,11 +109,13 @@ const Dashboard = () => {
           </table>
         </div>
       </section>
-      <PageSelect
-        totalClients={totalClientes}
-        space={clientsSpace}
-        atual={1}
-      />
+      {clientsSpace<Number(totalClientes)?
+        <PageSelect
+          totalClients={totalClientes}
+          space={clientsSpace}
+          atual={1}
+        />
+      :""}
     </>
   );
 }
