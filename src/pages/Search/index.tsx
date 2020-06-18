@@ -15,7 +15,7 @@ const Search = () => {
       <div className="container">
         
       </div>
-      <PageSelect/>
+      {/* <PageSelect/> */}
     </>
   );
 }
