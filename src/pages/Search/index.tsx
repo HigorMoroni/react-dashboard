@@ -11,7 +11,7 @@ const Search = () => {
   return (
     <>
       <SideMenu />
-      <Header />
+      <Header autoFocus={true}/>
       <div className="container">
         
       </div>

@@ -7,20 +7,24 @@ import "./styles.scss";
 
 interface HeaderProps {
     userImage?: string;
+    autoFocus: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({userImage}) => {
+const Header: React.FC<HeaderProps> = ({userImage, autoFocus}) => {
+    const inputProps = {
+        type: "text",
+        name: "search",
+        id: "search",
+        placeholder: "Busque por clientes",
+        autoFocus: false
+      };
+    if (autoFocus) inputProps.autoFocus = true;
     return (
         <header>
             <Link to="/search">
                 <div className="search-area">
                     <Search className="icon"/>
-                    <input
-                        type="text"
-                        name="search"
-                        id="search"
-                        placeholder="Busque por clientes"
-                    />
+                    <input {...inputProps}/>
                 </div>
             </Link>
             <div className="user-area">

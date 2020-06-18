@@ -63,7 +63,7 @@ const Dashboard = () => {
   return (
     <>
       <SideMenu />
-      <Header userImage={userImage}/>
+      <Header userImage={userImage} autoFocus={false}/>
       <section className="content">
         <h1>Visão Geral</h1>
         <div className="geral">
